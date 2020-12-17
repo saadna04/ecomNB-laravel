@@ -5,16 +5,17 @@
 <div class="container custom-login">
 	<div class="row">
 		<div class="col-sm-4 col-sm-offset-4">
-		<form>
+		<form action="login" method="POST">
 			  <div class="form-group">
-			    <label for="formGroupExampleInput">Email Address</label>
-			    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Email">
+			  	@csrf
+			    <label for="email">Email Address</label>
+			    <input type="text" name="email" class="form-control" id="email" placeholder="Email">
 			  </div>
 			  <div class="form-group">
-			    <label for="formGroupExampleInput2">Password</label>
-			    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Password">
+			    <label for="password">Password</label>
+			    <input type="password" name="password" class="form-control" id="password" placeholder="Password">
 			  </div>
-			  <button type="submit" class="btn btn-default">Submit</button>
+			  <button type="submit" class="btn btn-default">Login</button>
 		</form>			
 		</div>
 	</div>
